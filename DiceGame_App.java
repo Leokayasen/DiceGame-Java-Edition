@@ -20,10 +20,10 @@ public class DiceGame_App extends Application {
 
         //UI Elements
         var titleLabel = new Label("Welcome to DiceGame");
-        var instructionLabel = new Label("Enter the number of sides for the dice: ");
+        var instructionLabel = new Label("Enter the number of sides for the dice (max 20): ");
 
         var diceTypeInput = new TextField();
-        diceTypeInput.setPromptText("Enter a positive integer");
+        diceTypeInput.setPromptText("Enter a positive integer between 1 and 20");
 
         var rollButton = new Button("Roll Dice");
         var resultLabel = new Label();
@@ -34,14 +34,17 @@ public class DiceGame_App extends Application {
                 String inputText = diceTypeInput.getText();
                 int diceType = Integer.parseInt(inputText);
 
-                if (diceType > 0) {
-                    int roll = new Random().nextInt(diceType) + 1;
-                    resultLabel.setText("You rolled a " +roll+ " on a D"+diceType+ "!");
+                if (diceType <= 0) {
+                    showError("Invalid Dice Type!", "Please enter a positive integer!");
+                } else if (diceType > 20) {
+                    showError("Invalid Dice Type!", "Dice type cannot exceed 20 sides!");
                 } else {
-                    resultLabel.setText("Please enter a positive integer greater than 0");
+                    Random rand = new Random();
+                    int roll = rand.nextInt(diceType)+1;
+                    resultLabel.setText("You rolled " +roll+ " on a D"+diceType+"!");
                 }
             } catch (NumberFormatException e) {
-                resultLabel.setText("Invalid input! Enter a valid integer.");
+                showError("Input Error!", "Please enter a valid integer!");
             }
         });
 
@@ -53,6 +56,20 @@ public class DiceGame_App extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    /**
+     *
+     * @param title
+     * @param message
+     */
+    private void showError(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
 
     public static void main(String[] args) {
         launch(args);
