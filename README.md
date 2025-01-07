@@ -2,18 +2,12 @@
 A remake of my old Dice Game project from GCSE Computer Science, now in Java!
 - - -
 Current Features:
-- Rolls a single standard (1-6) dice
-- Outputs result
+- Enter an integer to set dice type
+- Click "roll" and read output
 
 Planned Features:
-- Dice Selection
-  - This includes adding support for different types of dice like D20, D12, etc
 - Visual using 2.5D (no idea how possible this is, but I will try!)
-
-Next Update (TBC Date):
-- Choose between Terminal and Swing modes
-  - Terminal mode means the game and input/output will be through a terminal window
-  - Swing mode means it will generate a GUI and handle input/output with that
+- Dice Type Formatting, making switching between dice types easier and simpler
 
 - - -
 Development and Testing is done via `IntelliJ Ultimate 2024.2.4`
