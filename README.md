@@ -1,6 +1,11 @@
 # DiceGame-Java-Edition
 A remake of my old Dice Game project from GCSE Computer Science, now in Java!
 - - -
+
+### Releases
+NOTE: Any 'releases' labelled "pre-release" or Alpha/Beta, are not compiled and can only be run using an IDE like IntelliJ, VSCode or BlueJ.
+
+- - -
 Current Features:
 - Enter an integer to set dice type
 - Click "roll" and read output
