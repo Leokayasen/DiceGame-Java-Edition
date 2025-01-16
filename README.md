@@ -3,16 +3,9 @@ A remake of my old Dice Game project from GCSE Computer Science, now in Java!
 - - -
 
 ### Releases
-NOTE: Any 'releases' labelled "pre-release" or Alpha/Beta, are not compiled and can only be run using an IDE like IntelliJ, VSCode or BlueJ.
+NOTE: Any 'releases' labelled "pre-release" and/or "Alpha"/"Beta", are not compiled and can only be run using an IDE like IntelliJ, VSCode or BlueJ.
 
-- - -
-Current Features:
-- Enter an integer to set dice type
-- Click "roll" and read output
-
-Planned Features:
-- Visual using 2.5D (no idea how possible this is, but I will try!)
-- Dice Type Formatting, making switching between dice types easier and simpler
+Be sure to check the releases tab to find the latest update!
 
 - - -
 Development and Testing is done via `IntelliJ Ultimate 2024.2.4`
